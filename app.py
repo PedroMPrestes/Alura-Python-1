@@ -27,7 +27,8 @@ def finalizar_app():
     exibir_subtitulo('Finalizar app')
 
 def voltar_ao_menu_principal():
-    '''Essa função é responsável por voltar ao menu principal'''
+    '''Essa função é responsável por voltar ao menu principal 
+    '''
     input('\nDigite uma tecla para voltar ao menu ')
     main()
 
@@ -46,7 +47,10 @@ def exibir_subtitulo(texto):
     print()
 
 def cadastrar_novo_restaurante():
-    '''Essa função é responsável por cadastrar um novo restaurante'''
+    '''Essa função é responsável por cadastrar um novo restaurante
+    inputs     nome_do_restaurante: string
+                categoria_do_restaurante: string
+    outputs    '''
     exibir_subtitulo('Cadastro de novos restaurantes')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
     categoria_do_restaurante = input('Digite a categoria do restaurante que deseja cadastrar: ')
@@ -57,7 +61,9 @@ def cadastrar_novo_restaurante():
     voltar_ao_menu_principal()
 
 def listar_restaurantes():
-    '''Essa função é responsável por listar os restaurantes cadastrados'''
+    '''Essa função é responsável por listar os restaurantes cadastrados
+    inputs     restaurantes: lista de dicionários
+    outputs    '''
     exibir_subtitulo('Listando restaurantes')
 
     print(f'Nome do restaurante'.ljust(22) + '|' + 'Categoria'.ljust(22) + '|' + 'Ativo')
@@ -72,7 +78,11 @@ def listar_restaurantes():
     voltar_ao_menu_principal()
 
 def alternar_estado_do_restaurante():
-    '''Essa função é responsável por ativar ou desativar um restaurante'''
+    '''Essa função é responsável por ativar ou desativar um restaurante
+    
+    inputs     nome_do_restaurante: string
+    outputs    estado: string
+    '''
     exibir_subtitulo('Ativando ou desativando um restaurante')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja ativar ou desativar: ')
     for restaurante in restaurantes:
@@ -86,7 +96,9 @@ def alternar_estado_do_restaurante():
     voltar_ao_menu_principal()
 
 def escolher_opcao():
-    '''Essa função é responsável por escolher a opção do menu'''
+    '''Essa função é responsável por escolher a opção do menu
+    inputs     opcao_escolhida: int
+    outputs   '''
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
         # opcao_escolhida = int(opcao_escolhida)
